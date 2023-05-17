@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+import {FaBars, FaTimes, FaGithub, FaLinkedin, FaUser} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Logo from '../assets/logo1.png'
+import Logo from '../assets/GuestBotsLogoTrans.png'
 import { Link } from 'react-scroll'
 
 
@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
 return (
-  <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+  <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#2c2d30] text-[#d6d6d6]'>
       <div>
       <Link  to="home" smooth={true}  duration={500} >
           <img src={Logo} alt="Logo" style={{height: '50px'}}/>
@@ -22,7 +22,7 @@ return (
 
       {/* menu */}
       
-          <ul className='hidden md:flex'>
+          <ul className='hidden md:flex pt-2'>
               <li>
               <Link  to="home" smooth={true}  duration={500} >
                   Home
@@ -30,22 +30,34 @@ return (
               </li>
               <li>
               <Link  to="about" smooth={true}  duration={500} >
-                  About
+                  About us
               </Link>
               </li>
               <li>
               <Link  to="skills" smooth={true}  duration={500} >
-                  Skills
+                  How it works
               </Link>
               </li>
+              
               <li>
-              <Link  to="work" smooth={true}  duration={500} >
-                  Work
+                <Link  to="work" smooth={true}  duration={500} >
+                  Contact
+                </Link>
+              
+              </li>
+              <li>
+              <Link  to="contact" smooth={true}  duration={500} >
+                  Sign in
               </Link>
               </li>
               <li>
               <Link  to="contact" smooth={true}  duration={500} >
-                  Contact
+                  Register
+              </Link>
+              </li>
+              <li>
+              <Link  to="contact" smooth={true}  duration={500} >
+              <div className='mb-0'><FaUser size='25' /></div>
               </Link>
               </li>
           </ul>
@@ -90,39 +102,7 @@ return (
       
 
 
-      {/* Social icons */}
-       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'> 
-          <ul className={!nav ?'true': 'flex fixed flex-col top-[35%] left-0'}>
-
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-                  <a className='flex justify-between items-center w-full text-gray-300' href="https://github.com/mikecurrier18/">
-                      GitHub <FaGithub size={30} />
-                  </a>
-              </li>
-
-
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                  <a className='flex justify-between items-center w-full text-gray-300' href="https://www.linkedin.com/in/michael-currier-26ba77185/">
-                      Linkedin <FaLinkedin size={30} />
-                  </a>
-              </li>
-
-              
-                  <Link  to="contact" smooth={true}  duration={500} >
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#4a235a]'>
-                  <a className='flex justify-between items-center w-full text-gray-300' href="/">
-                      Email <HiOutlineMail size={30} />
-                  </a>
-              </li>
-              </Link>
-
-              <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ee3756]'>
-                  <a className='flex justify-between items-center w-full text-gray-300' href="/">
-                      Resume <BsFillPersonLinesFill size={30} />
-                  </a>
-              </li>
-          </ul>
-      </div>
+      
   
   </div>
 )
